@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FISE VENDÉE - RIDER MVP</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="app-container">
+        
+        <!-- NOUVELLE BANNIÈRE PREMIUM (IMAGE) -->
+        <header class="main-header">
+            <img src="banner.jpg" alt="FISE Vendée - Rider MVP" class="header-banner-img">
+        </header>
+
+        <!-- Zone Minuteur -->
+        <div class="timer-section">
+            <div class="timer-box">
+                <div id="timer-status">EN ATTENTE</div>
+                <div id="timer-display">05:00</div>
+            </div>
+        </div>
+
+        <main>
+            <!-- Liste de Vote (Grille 2 colonnes) -->
+            <div class="riders-list" id="riders-container"></div>
+        </main>
+    </div>
+
+    <!-- Firebase SDK -->
+    <script src="https://www.gstatic.com/firebasejs/10.8.1/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.8.1/firebase-database-compat.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,142 @@
+/* Importation de ta police locale Sequel 100 Wide */
+@font-face {
+    font-family: 'Sequel 100 Wide';
+    src: url('sequel.ttf') format('truetype'),
+         url('sequel.otf') format('opentype');
+    font-weight: normal; font-style: normal;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+    background-color: #000000;
+    font-family: 'HelveticaNeue-CondensedBold', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-weight: bold;
+    font-stretch: condensed;
+    display: flex;
+    justify-content: center;
+}
+
+/* Conteneur global */
+.app-container {
+    width: 100%;
+    max-width: 420px;
+    min-height: 100vh;
+    border: 6px solid #FFE600;
+    border-radius: 35px;
+    background-color: #000;
+    overflow: hidden;
+    position: relative;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+/* =========================================
+   1. BANNIÈRE PREMIUM (IMAGE)
+   ========================================= */
+.main-header {
+    width: 100%;
+    border-bottom: 4px solid #000;
+    background-color: #000;
+}
+
+.header-banner-img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* =========================================
+   2. MINUTEUR CAMERA
+   ========================================= */
+.timer-section {
+    padding: 20px;
+    color: white;
+    text-align: center;
+}
+
+.timer-box {
+    display: inline-block;
+    text-align: center;
+    margin: 10px auto;
+    padding: 15px 30px;
+    position: relative;
+}
+
+.timer-box::before { content: ''; position: absolute; top: 0; left: 0; width: 15px; height: 15px; border-top: 3px solid white; border-left: 3px solid white; }
+.timer-box::after { content: ''; position: absolute; bottom: 0; right: 0; width: 15px; height: 15px; border-bottom: 3px solid white; border-right: 3px solid white; }
+
+#timer-status {
+    font-size: 16px;
+    color: #FFE600;
+    margin-bottom: 5px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+#timer-display {
+    font-family: 'Sequel 100 Wide', sans-serif;
+    font-size: 50px;
+    color: white;
+    line-height: 1.1;
+    text-shadow: 2px 2px #FFE600;
+}
+
+/* =========================================
+   3. GRILLE DES RIDERS (2 COLONNES)
+   ========================================= */
+.riders-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    padding: 0 15px 30px 15px;
+}
+
+.rider-card {
+    background-color: #FFE600;
+    border: 4px solid #000;
+    display: flex;
+    flex-direction: column;
+}
+
+.rider-photo {
+    width: 100%;
+    height: 140px;
+    object-fit: cover;
+    object-position: center 15%;
+    border-bottom: 4px solid #000;
+    filter: grayscale(100%) contrast(120%);
+}
+
+.rider-info {
+    background-color: #000;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    border-bottom: 4px solid #000;
+}
+
+.rider-info h3 {
+    font-family: 'Sequel 100 Wide', sans-serif;
+    font-size: 15px;
+}
+
+.vote-btn {
+    background-color: #FFE600;
+    color: #000;
+    font-family: 'HelveticaNeue-CondensedBold', 'Helvetica Neue', Helvetica, sans-serif;
+    font-weight: bold;
+    font-stretch: condensed;
+    font-size: 16px;
+    padding: 12px;
+    border: none;
+    cursor: pointer;
+    text-transform: uppercase;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.vote-btn:active { background-color: #FFF; }
